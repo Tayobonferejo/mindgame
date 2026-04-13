@@ -1,16 +1,62 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
+:root {
+    --grid-size: 100px;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Rest of your CSS stays the same */
 body {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Pushes timers to top/bottom */
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
 
+main {
+    display: grid;
+    grid-template-columns: repeat(3, var(--grid-size));
+    grid-template-rows: repeat(3, var(--grid-size));
+    gap: 0;
 }
 
 main > div {
-    width: 80;
-    height: 80;
     border: 2px solid white;
+}
+
+.timer {
+    width: 120px;
+    height: 50px;
+    border: 2px solid green;
+    background: rgba(0,0,0,0.3);
+}
+
+/* Move first and last timers to the right */
+.timer:first-child,
+.timer:last-child {
+    align-self: flex-end;  /* For column flex direction */
+    margin-right: 0;
+}
+
+/* Alternative: Make timers container to control layout */
+.timer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
