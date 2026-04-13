@@ -14,8 +14,8 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
 }
 
 /* Rest of your CSS stays the same */
@@ -23,7 +23,7 @@ body {
     background-color: blue;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Pushes timers to top/bottom */
+    justify-content: center;  /* Pushes timers to top/bottom */
     align-items: center;
     height: 100vh;
     padding: 20px;
@@ -45,6 +45,8 @@ main > div {
     height: 50px;
     border: 2px solid green;
     background: rgba(0,0,0,0.3);
+
+    margin: 12px 0;
 }
 
 /* Move first and last timers to the right */
@@ -52,11 +54,4 @@ main > div {
 .timer:last-child {
     align-self: flex-end;  /* For column flex direction */
     margin-right: 0;
-}
-
-/* Alternative: Make timers container to control layout */
-.timer-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
