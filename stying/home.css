@@ -103,6 +103,20 @@ body {
   font-size: 14px;
 }
 
+.time-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* For better browser support */
+.time-input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.time-input input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* FOOT LABEL */
 .sub-label {
   margin-top: 8px;
